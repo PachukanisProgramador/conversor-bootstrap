@@ -1,0 +1,39 @@
+body{
+  color:#000033;
+  background-color: #f1f8e9;
+  padding: 2%;
+}
+
+
+
+#fundo{
+  background-image:url(../imagens/teste.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border: 2px black solid;
+}
+
+#fundo:hover{
+  transform: scale(1.002);
+}
+
+#menu-navegacao{
+  margin: 20%;
+}
+
+#navegacao{
+  padding-top: 15px;
+}
+
+#botao-sobre{
+  background-color: #f1f8e9;
+}
+
+#fundo-input-url{
+  border: 2px #039be5 solid;
+  background-color: #f1f8e9;
+  margin-left: 40px;
+  padding: 10px;
+  vertical-align: auto;
+}
