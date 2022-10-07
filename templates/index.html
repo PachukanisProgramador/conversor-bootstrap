@@ -21,30 +21,39 @@
     
     <fieldset id="fundo">
       <ul class="nav nav-pills" id="menu-navegacao">
-        <li class="nav-item" id="navegacao">
-          <a class="nav-link active" href="#">Converter arquivo</a>
-        </li>
         <li class="nav-item dropdown" id="navegacao">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tipo de conversão</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" id="botao-mp4-mp3" href="#">mp4 > mp3</a>
+          <a class="nav-link dropdown-toggle" id="botao-tipo" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tipo de conversão</a>
+          <div class="dropdown-menu" id="menu-escolha">
+            <a class="dropdown-item" id="botao-mp4-mp3" href="#" onclick="resultadoOpcaoMp3()">mp4 > mp3</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" id="botao-mp3-mp4" href="#">mp3 > mp4</a>
+            <a class="dropdown-item" id="botao-mp3-mp4" href="#" onclick="resultadoOpcaoMp4()">mp3 > mp4</a>
         </li>
         <li class="nav-item" id="navegacao">
           <a class="nav-link" id="botao-sobre" href="#">Sobre</a>
         </li>
         <fieldset id="fundo-input-url">
           <li>
-              <label for="" style="margin: 10px;">Insira a url aqui: </label>
-              <input type="url" id="input-url">
+            <label for="" style="margin: 10px;" id="label-url" >Insira a url aqui: </label>
+            <input type="url" id="input-url">
           </li>
         </fieldset>
+        <li class="nav-item" id="navegacao">
+          <a class="nav-link active" id="botao-converter" href="#" onclick="resultadoConverter()">Converter arquivo</a>
+        </li>
       </ul>
     </fieldset>
     <br>
-      <div class="alert alert-primary" role="alert">
-        O arquivo foi convertido com sucesso!
-      </div>
+      <script>
+      var input = document.querySelector("input");
+      function resultadoOpcaoMp4(){
+        input.placeholder = "Converter para MP4";
+      }
+      function resultadoOpcaoMp3(){
+        input.placeholder = "Converter para MP3";
+      }
+      function resultadoConverter(){
+        document.getElementById("#fundo").innerHTML;
+      }
+      </script>
   </body>
 </html>

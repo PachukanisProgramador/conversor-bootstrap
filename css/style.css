@@ -4,14 +4,13 @@ body{
   padding: 2%;
 }
 
-
-
 #fundo{
-  background-image:url(../imagens/teste.jpg);
+  background-image:url(../imagens/fundo.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  border: 2px black solid;
+  width: 95%;
+  height: 500px;
 }
 
 #fundo:hover{
@@ -19,21 +18,28 @@ body{
 }
 
 #menu-navegacao{
-  margin: 20%;
+  margin: auto;
+  padding: 15%;
 }
 
-#navegacao{
-  padding-top: 15px;
+#botao-tipo{
+  margin-right: 50px;
+  background-color: #f1f8e9;
 }
 
 #botao-sobre{
   background-color: #f1f8e9;
 }
 
+#botao-coonverter:hover{
+  background-color: #f1f8e9;
+}
+
 #fundo-input-url{
   border: 2px #039be5 solid;
   background-color: #f1f8e9;
-  margin-left: 40px;
   padding: 10px;
   vertical-align: auto;
+  margin-left: 20px;
+  margin-right: 20px;
 }
