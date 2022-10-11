@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Conversor de arquivos</title>
-  </head>
-  <body>
+  <title>Conversor de arquivos</title>
+</head>
 
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    
-    <fieldset id="fundo">
-      <ul class="nav nav-pills" id="menu-navegacao">
-        <li class="nav-item dropdown" id="navegacao">
-          <a class="nav-link dropdown-toggle" id="botao-tipo" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tipo de conversão</a>
-          <div class="dropdown-menu" id="menu-escolha">
-            <a class="dropdown-item" id="botao-mp4-mp3" href="#" onclick="resultadoOpcaoMp3()">mp4 > mp3</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" id="botao-mp3-mp4" href="#" onclick="resultadoOpcaoMp4()">mp3 > mp4</a>
-        </li>
-        <li class="nav-item" id="navegacao">
-          <a class="nav-link" id="botao-sobre" href="#">Sobre</a>
-        </li>
-        <fieldset id="fundo-input-url">
-          <li>
-            <label for="" style="margin: 10px;" id="label-url" >Insira a url aqui: </label>
-            <input type="url" id="input-url">
-          </li>
-        </fieldset>
-        <li class="nav-item" id="navegacao">
-          <a class="nav-link active" id="botao-converter" href="#" onclick="resultadoConverter()">Converter arquivo</a>
-        </li>
-      </ul>
+<body>
+
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <fieldset id="fundo">
+    <fieldset id="fundo-opcoes">
+      <label id="label-opcao-converter">Converter para:</label>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons" , id="botoes-superiores">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="" id="option1" autocomplete="off" onclick="resultadoOpcaoMp4()" checked> MP4
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2" autocomplete="off" onclick="resultadoOpcaoMp3()"> MP3
+        </label>
+      </div>
     </fieldset>
-    <br>
-      <script>
+    <div class="form-group" id='painel-url'>
+      <label for="input-url" id='label-url'>Insira a url</label>
+      <input type="url" class="form-control" id="input-url" placeholder="">
+      <a class="btn btn-outline-light" id="botao-converter" href="#" onclick="resultadoConverter()">Converter
+        arquivo</a>
+    </div>
+    </fieldset>
+    <script>
       var input = document.querySelector("input");
-      function resultadoOpcaoMp4(){
+      function resultadoOpcaoMp4() {
         input.placeholder = "Converter para MP4";
       }
-      function resultadoOpcaoMp3(){
+      function resultadoOpcaoMp3() {
         input.placeholder = "Converter para MP3";
       }
-      function resultadoConverter(){
+      function resultadoConverter() {
         document.getElementById("#fundo").innerHTML;
       }
-      </script>
-  </body>
+    </script>
+</body>
+
 </html>

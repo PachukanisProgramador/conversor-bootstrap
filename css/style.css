@@ -1,45 +1,66 @@
-body{
-  color:#000033;
-  background-color: #f1f8e9;
+BODY{
+  color:white;
+  background-color: rgb(24, 37, 48);
   padding: 2%;
+  background-image: url(../imagens/fundo-do-fundo.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #fundo{
-  background-image:url(../imagens/fundo.jpg);
-  background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  margin: auto;
   width: 95%;
   height: 500px;
+  margin-top: 4%;
 }
 
 #fundo:hover{
   transform: scale(1.002);
 }
 
-#menu-navegacao{
+#fundo-opcoes{
+  margin-left: 72px;
+  background-color: rgb(24, 37, 48);
+  border-radius: 20px;
+  color: #C36138;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 2%;
+  width: 380px;
+}
+
+#botoes-superiores{
+  padding: 20px;
+}
+
+#painel-url{
   margin: auto;
-  padding: 15%;
+  vertical-align: middle;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin:5%;
+  padding: 2%;
+  background-color: rgb(24, 37, 48, 0.95);
+  border-radius: 70px;
+  color: #C36138;
+  font-weight:600;
+  font-size: 20px;
 }
 
-#botao-tipo{
-  margin-right: 50px;
-  background-color: #f1f8e9;
+
+#input-url{
+  grid-column-start: 1;
+  grid-column-end: 1;
 }
 
-#botao-sobre{
-  background-color: #f1f8e9;
+#botao-converter{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  margin: 0% 5% 5% 5%;
 }
 
-#botao-coonverter:hover{
-  background-color: #f1f8e9;
-}
-
-#fundo-input-url{
-  border: 2px #039be5 solid;
-  background-color: #f1f8e9;
-  padding: 10px;
-  vertical-align: auto;
-  margin-left: 20px;
-  margin-right: 20px;
+button:active{
+  background: #C36138;
 }
